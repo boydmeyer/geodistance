@@ -34,8 +34,8 @@ point2 := geodistance.NewGeoPoint(51.5074, -0.1278)  // London
 Calculate the distance between two points, specifying the unit (`Kilometers` or `Miles`):
 
 ```go
-distanceKm := point1.GetDistance(*point2, geodistance.Kilometers)
-distanceMi := point1.GetDistance(*point2, geodistance.Miles)
+distanceKm := point1.GetDistance(point2, geodistance.Kilometers)
+distanceMi := point1.GetDistance(point2, geodistance.Miles)
 ```
 
 ## Example
@@ -56,11 +56,11 @@ func main() {
 	london := geodistance.NewGeoPoint(51.5074, -0.1278)   // London
 
 	// Calculate distance in kilometers
-	distanceKm := newYork.GetDistance(*london, geodistance.Kilometers)
+	distanceKm := newYork.GetDistance(london, geodistance.Kilometers)
 	fmt.Printf("Distance in kilometers: %.2f km\n", distanceKm)
 
 	// Calculate distance in miles
-	distanceMi := newYork.GetDistance(*london, geodistance.Miles)
+	distanceMi := newYork.GetDistance(london, geodistance.Miles)
 	fmt.Printf("Distance in miles: %.2f mi\n", distanceMi)
 }
 ```
